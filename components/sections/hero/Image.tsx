@@ -21,7 +21,7 @@ export default function HeroImage() {
       >
         <div className="relative aspect-[4/5] overflow-hidden border border-slate-900/10 bg-slate-200 dark:border-white/10 dark:bg-slate-900">
           <Image
-            src="/images/profile/Amit-Ponwalkar-Profile.jpg"
+            src={siteConfig.profileImage}
             fill
             priority
             sizes="(min-width: 1024px) 390px, 88vw"

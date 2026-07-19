@@ -22,6 +22,10 @@ export const navItems = [
     href: "#projects",
   },
   {
+    title: "Certificates",
+    href: "#certificates",
+  },
+  {
     title: "Contact",
     href: "#contact",
   },

@@ -4,14 +4,7 @@ import { siteConfig } from "@/config/site";
 import { motion } from "framer-motion";
 import Buttons from "./Buttons";
 import Social from "./Social";
-
-const techStack = ["Java", "Spring Boot", "Angular", "Flutter", "Cloud", "Firebase"];
-
-const stats = [
-  { value: "13+", label: "Years" },
-  { value: "40+", label: "Projects" },
-  { value: "5", label: "Core Stacks" },
-];
+import { AnimatedCounter } from "@/components/motion";
 
 export default function Content() {
   return (
@@ -64,7 +57,7 @@ export default function Content() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.54, duration: 0.5 }}
       >
-        {techStack.map((tech) => (
+        {siteConfig.specialties.map((tech) => (
           <span
             key={tech}
             className="border border-slate-900/10 bg-white/55 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-white/10 dark:text-slate-200"
@@ -83,13 +76,13 @@ export default function Content() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.72, duration: 0.55 }}
       >
-        {stats.map((stat) => (
+        {siteConfig.heroStats.map((stat) => (
           <div
             key={stat.label}
             className="px-4 py-5 text-center [&:not(:last-child)]:border-r [&:not(:last-child)]:border-slate-900/10 dark:[&:not(:last-child)]:border-white/10"
           >
             <div className="text-2xl font-bold text-slate-950 dark:text-white sm:text-3xl">
-              {stat.value}
+              <AnimatedCounter value={stat.value} />
             </div>
             <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
               {stat.label}
