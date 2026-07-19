@@ -1,4 +1,6 @@
-export const navigation = [
+import type { NavItemData } from "./types";
+
+export const navItems = [
   {
     title: "Home",
     href: "#home",
@@ -27,4 +29,4 @@ export const navigation = [
     title: "Contact",
     href: "#contact",
   },
-];
+] satisfies NavItemData[];
